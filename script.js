@@ -31,9 +31,10 @@ function refreshSpells(championData) {
   }
 
   championData.spells.forEach((spell) => {
+    const spellText = `${spell.name} - Cooldown: ${spell.cooldown}.`;
     var li = document.createElement("li");
     li.setAttribute("id", spell.id);
-    li.appendChild(document.createTextNode(spell.name));
+    li.appendChild(document.createTextNode(spellText));
     spellList.appendChild(li);
   });
 }
