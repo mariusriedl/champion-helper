@@ -20,11 +20,15 @@ function handleSearch() {
   var championData = getChampionData(id);
   document.getElementById("champion-name").innerHTML = championData.id;
 
-  drawSpells(championData);
+  refreshSpells(championData);
 }
 
-function drawSpells(championData) {
+function refreshSpells(championData) {
   var spellList = document.getElementById("spell-list");
+
+  if (spellList.getElementsByTagName("li").length) {
+    spellList.innerHTML = "";
+  }
 
   championData.spells.forEach((spell) => {
     var li = document.createElement("li");
