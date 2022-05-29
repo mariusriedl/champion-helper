@@ -18,6 +18,9 @@ function getChampionData(id) {
 function handleSearch() {
   var id = document.getElementById("champion-search-input").value;
 
+  //ignore case sensitivity
+  id = id[0].toUpperCase() + id.toLowerCase().slice(1);
+
   // Wukong edge case
   if (id == "Wukong") {
     id = "MonkeyKing";
