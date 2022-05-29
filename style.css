@@ -1,0 +1,29 @@
+body {
+  background-color: #202020;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.champion-search {
+  text-align: center;
+  margin: 2em;
+}
+
+.champion-search-input {
+  border: none;
+}
+
+.champion-search-input:focus {
+  outline: none;
+}
+
+.champion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spell-list {
+  list-style-type: none;
+}

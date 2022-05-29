@@ -5,16 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 
     <title>Document</title>
   </head>
   <body>
-    <input id="champion-search" type="text" value="" placeholder="Champion" />
-    <button onClick="handleSearch()">Search</button>
+    <form class="champion-search" onsubmit="return false">
+      <input
+        id="champion-search-input"
+        class="champion-search-input"
+        type="text"
+        value=""
+        placeholder="Champion"
+      />
+      <button
+        class="champion-search-btn"
+        type="submit"
+        onclick="handleSearch()"
+      >
+        Search
+      </button>
+    </form>
 
-    <h1 id="champion-name"></h1>
+    <div class="champion-container">
+      <h1 id="champion-name" class="champion-name"></h1>
 
-    <ul id="spell-list"></ul>
+      <ul id="spell-list" class="spell-list"></ul>
+    </div>
   </body>
 </html>

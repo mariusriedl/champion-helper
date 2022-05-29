@@ -16,7 +16,7 @@ function getChampionData(id) {
 }
 
 function handleSearch() {
-  var id = document.getElementById("champion-search").value;
+  var id = document.getElementById("champion-search-input").value;
   var championData = getChampionData(id);
   document.getElementById("champion-name").innerHTML = championData.id;
 
@@ -31,7 +31,13 @@ function refreshSpells(championData) {
   }
 
   championData.spells.forEach((spell) => {
-    const spellText = `${spell.name} - Cooldown: ${spell.cooldown}.`;
+    var cooldownText = "";
+
+    spell.cooldown.forEach((cooldown) => {
+      cooldownText += cooldown + "s ";
+    });
+
+    const spellText = `${spell.name} Cooldown: ${cooldownText}`;
     var li = document.createElement("li");
     li.setAttribute("id", spell.id);
     li.appendChild(document.createTextNode(spellText));
