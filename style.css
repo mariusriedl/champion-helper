@@ -1,20 +1,43 @@
 body {
-  background-color: #202020;
-  color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .champion-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 2em;
 }
 
 .champion-search-input {
+  font-size: 18pt;
   border: none;
+  border-radius: 1rem;
+  padding: 0 1em;
+  height: 2em;
 }
 
 .champion-search-input:focus {
   outline: none;
+}
+
+.champion-search-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+}
+
+.champion-search-btn:hover {
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
 }
 
 .champion-container {
@@ -26,4 +49,11 @@ body {
 
 .spell-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.magnify {
+  width: 3em;
+  height: 3em;
 }
