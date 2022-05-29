@@ -17,8 +17,15 @@ function getChampionData(id) {
 
 function handleSearch() {
   var id = document.getElementById("champion-search-input").value;
+
+  // Wukong edge case
+  if (id == "Wukong") {
+    id = "MonkeyKing";
+  }
+
   var championData = getChampionData(id);
-  document.getElementById("champion-name").innerHTML = championData.id;
+
+  document.getElementById("champion-name").innerHTML = id;
 
   refreshSpells(championData);
 }
